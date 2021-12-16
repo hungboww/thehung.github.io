@@ -113,7 +113,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Data',
+        'NAME': 'blog',
         'USER': 'root',
         'PASSWORD': 'Password@123',
         'HOST': 'localhost',
@@ -164,7 +164,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 SUMMERNOTE_THEME = 'bs3'
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=3),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=4),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,

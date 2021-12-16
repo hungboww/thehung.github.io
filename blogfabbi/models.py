@@ -30,7 +30,6 @@ class BlogPost(models.Model):
     featured = models.BooleanField(default=False)
     date_created = models.DateTimeField(default=datetime.now, blank=True)
 
-
     def save(self,*args,**kwargs):
         original_slug = slugify(self.title)
         queryset = BlogPost.objects.all().filter(slug__iexact = original_slug).count()
@@ -41,7 +40,6 @@ class BlogPost(models.Model):
             slug = original_slug + '-'+str(count)
             count +=1
             queryset = BlogPost.objects.all().filter(slug__iexact=slug).count()
-
 
         self.slug = slug
 
@@ -60,4 +58,4 @@ class BlogPost(models.Model):
 
 
 
-# class BlogIT(models.Model):
+

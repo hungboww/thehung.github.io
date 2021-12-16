@@ -19,4 +19,4 @@ urlpatterns = [
     path('api/blog/', include('blog_it.urls'), name= 'blog_it'),
     path('summernote/', include('django_summernote.urls')),
     path('api/contacts/', include('contacts.urls')),
- ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

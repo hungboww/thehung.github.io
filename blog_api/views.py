@@ -84,3 +84,5 @@ class CommentDetail(generics.ListCreateAPIView):
         contacts = CommentBlog.objects.filter(post_id=pk)
         serializer = CommentSerializer(contacts, many=True)
         return Response(serializer.data)
+
+
